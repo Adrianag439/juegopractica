@@ -1,0 +1,319 @@
+<mxfile host="Electron" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) draw.io/29.6.1 Chrome/142.0.7444.265 Electron/39.8.0 Safari/537.36" version="29.6.1">
+  <diagram id="uxOR4WuidTPajv5LUjU-" name="Página-1">
+    <mxGraphModel dx="1489" dy="1031" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1654" pageHeight="1169" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="t_jugador" parent="1" style="swimlane;fontStyle=1;align=center;startSize=30;fillColor=#dae8fc;strokeColor=#6c8ebf;fontSize=12;" value="JUGADOR" vertex="1">
+          <mxGeometry height="120" width="260" x="30" y="30" as="geometry" />
+        </mxCell>
+        <mxCell id="t_jugador_pk" parent="t_jugador" style="text;strokeColor=none;fillColor=#fff9c4;align=left;verticalAlign=top;spacingLeft=8;fontSize=11;fontStyle=1;" value="🔑 id : VARCHAR(36) PK" vertex="1">
+          <mxGeometry height="22" width="260" y="30" as="geometry" />
+        </mxCell>
+        <mxCell id="t_jugador_r1" parent="t_jugador" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=8;fontSize=11;" value="apodo : VARCHAR(10) UNIQUE NOT NULL" vertex="1">
+          <mxGeometry height="20" width="260" y="52" as="geometry" />
+        </mxCell>
+        <mxCell id="t_jugador_r2" parent="t_jugador" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=8;fontSize=11;" value="sesion_activa : BOOLEAN NOT NULL" vertex="1">
+          <mxGeometry height="20" width="260" y="72" as="geometry" />
+        </mxCell>
+        <mxCell id="t_jugador_r3" parent="t_jugador" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=8;fontSize=11;" value="fecha_registro : DATETIME NOT NULL" vertex="1">
+          <mxGeometry height="20" width="260" y="92" as="geometry" />
+        </mxCell>
+        <mxCell id="t_sesion" parent="1" style="swimlane;fontStyle=1;align=center;startSize=30;fillColor=#dae8fc;strokeColor=#6c8ebf;fontSize=12;" value="SESION" vertex="1">
+          <mxGeometry height="120" width="270" x="340" y="30" as="geometry" />
+        </mxCell>
+        <mxCell id="t_sesion_pk" parent="t_sesion" style="text;strokeColor=none;fillColor=#fff9c4;align=left;verticalAlign=top;spacingLeft=8;fontSize=11;fontStyle=1;" value="🔑 id : VARCHAR(36) PK" vertex="1">
+          <mxGeometry height="22" width="270" y="30" as="geometry" />
+        </mxCell>
+        <mxCell id="t_sesion_fk" parent="t_sesion" style="text;strokeColor=none;fillColor=#f8d7da;align=left;verticalAlign=top;spacingLeft=8;fontSize=11;" value="🔗 apodo : VARCHAR(10) FK → JUGADOR.apodo" vertex="1">
+          <mxGeometry height="22" width="270" y="52" as="geometry" />
+        </mxCell>
+        <mxCell id="t_sesion_r1" parent="t_sesion" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=8;fontSize=11;" value="activa : BOOLEAN NOT NULL" vertex="1">
+          <mxGeometry height="20" width="270" y="74" as="geometry" />
+        </mxCell>
+        <mxCell id="t_sesion_r2" parent="t_sesion" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=8;fontSize=11;" value="fecha_creacion : DATETIME NOT NULL" vertex="1">
+          <mxGeometry height="20" width="270" y="94" as="geometry" />
+        </mxCell>
+        <mxCell id="t_nivel" parent="1" style="swimlane;fontStyle=1;align=center;startSize=30;fillColor=#e1d5e7;strokeColor=#9673a6;fontSize=12;" value="NIVEL" vertex="1">
+          <mxGeometry height="140" width="280" x="670" y="30" as="geometry" />
+        </mxCell>
+        <mxCell id="t_nivel_pk" parent="t_nivel" style="text;strokeColor=none;fillColor=#fff9c4;align=left;verticalAlign=top;spacingLeft=8;fontSize=11;fontStyle=1;" value="🔑 id : VARCHAR(36) PK" vertex="1">
+          <mxGeometry height="22" width="280" y="30" as="geometry" />
+        </mxCell>
+        <mxCell id="t_nivel_r1" parent="t_nivel" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=8;fontSize=11;" value="nombre : VARCHAR(20) NOT NULL" vertex="1">
+          <mxGeometry height="20" width="280" y="52" as="geometry" />
+        </mxCell>
+        <mxCell id="t_nivel_r2" parent="t_nivel" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=8;fontSize=11;" value="vidas : INT NOT NULL" vertex="1">
+          <mxGeometry height="20" width="280" y="72" as="geometry" />
+        </mxCell>
+        <mxCell id="t_nivel_r3" parent="t_nivel" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=8;fontSize=11;" value="tiene_temporizador : BOOLEAN NOT NULL" vertex="1">
+          <mxGeometry height="20" width="280" y="92" as="geometry" />
+        </mxCell>
+        <mxCell id="t_nivel_r4" parent="t_nivel" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=8;fontSize=11;" value="puntuacion_base : INT NOT NULL" vertex="1">
+          <mxGeometry height="20" width="280" y="112" as="geometry" />
+        </mxCell>
+        <mxCell id="t_config" parent="1" style="swimlane;fontStyle=1;align=center;startSize=30;fillColor=#e1d5e7;strokeColor=#9673a6;fontSize=12;" value="CONFIG_NIVEL" vertex="1">
+          <mxGeometry height="160" width="290" x="1010" y="30" as="geometry" />
+        </mxCell>
+        <mxCell id="t_config_pk" parent="t_config" style="text;strokeColor=none;fillColor=#fff9c4;align=left;verticalAlign=top;spacingLeft=8;fontSize=11;fontStyle=1;" value="🔑 id : VARCHAR(36) PK" vertex="1">
+          <mxGeometry height="22" width="290" y="30" as="geometry" />
+        </mxCell>
+        <mxCell id="t_config_fk" parent="t_config" style="text;strokeColor=none;fillColor=#f8d7da;align=left;verticalAlign=top;spacingLeft=8;fontSize=11;" value="🔗 id_nivel : VARCHAR(36) FK → NIVEL.id" vertex="1">
+          <mxGeometry height="22" width="290" y="52" as="geometry" />
+        </mxCell>
+        <mxCell id="t_config_r1" parent="t_config" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=8;fontSize=11;" value="max_intentos : INT NOT NULL" vertex="1">
+          <mxGeometry height="20" width="290" y="74" as="geometry" />
+        </mxCell>
+        <mxCell id="t_config_r2" parent="t_config" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=8;fontSize=11;" value="max_pistas : INT NOT NULL" vertex="1">
+          <mxGeometry height="20" width="290" y="94" as="geometry" />
+        </mxCell>
+        <mxCell id="t_config_r3" parent="t_config" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=8;fontSize=11;" value="tiempo_seg : INT" vertex="1">
+          <mxGeometry height="20" width="290" y="114" as="geometry" />
+        </mxCell>
+        <mxCell id="t_config_r4" parent="t_config" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=8;fontSize=11;" value="intentos_pista_trigger : INT NOT NULL" vertex="1">
+          <mxGeometry height="20" width="290" y="134" as="geometry" />
+        </mxCell>
+        <mxCell id="t_partida" parent="1" style="swimlane;fontStyle=1;align=center;startSize=30;fillColor=#fff2cc;strokeColor=#d6b656;fontSize=12;" value="PARTIDA" vertex="1">
+          <mxGeometry height="200" width="290" x="30" y="240" as="geometry" />
+        </mxCell>
+        <mxCell id="t_partida_pk" parent="t_partida" style="text;strokeColor=none;fillColor=#fff9c4;align=left;verticalAlign=top;spacingLeft=8;fontSize=11;fontStyle=1;" value="🔑 id : VARCHAR(36) PK" vertex="1">
+          <mxGeometry height="22" width="290" y="30" as="geometry" />
+        </mxCell>
+        <mxCell id="t_partida_fk1" parent="t_partida" style="text;strokeColor=none;fillColor=#f8d7da;align=left;verticalAlign=top;spacingLeft=8;fontSize=11;" value="🔗 apodo_jugador : VARCHAR(10) FK → JUGADOR.apodo" vertex="1">
+          <mxGeometry height="22" width="290" y="52" as="geometry" />
+        </mxCell>
+        <mxCell id="t_partida_fk2" parent="t_partida" style="text;strokeColor=none;fillColor=#f8d7da;align=left;verticalAlign=top;spacingLeft=8;fontSize=11;" value="🔗 id_nivel : VARCHAR(36) FK → NIVEL.id" vertex="1">
+          <mxGeometry height="22" width="290" y="74" as="geometry" />
+        </mxCell>
+        <mxCell id="t_partida_r1" parent="t_partida" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=8;fontSize=11;" value="vidas_restantes : INT NOT NULL" vertex="1">
+          <mxGeometry height="20" width="290" y="96" as="geometry" />
+        </mxCell>
+        <mxCell id="t_partida_r2" parent="t_partida" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=8;fontSize=11;" value="puntuacion : INT DEFAULT 0" vertex="1">
+          <mxGeometry height="20" width="290" y="116" as="geometry" />
+        </mxCell>
+        <mxCell id="t_partida_r3" parent="t_partida" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=8;fontSize=11;" value="intentos_fallidos : INT DEFAULT 0" vertex="1">
+          <mxGeometry height="20" width="290" y="136" as="geometry" />
+        </mxCell>
+        <mxCell id="t_partida_r4" parent="t_partida" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=8;fontSize=11;" value="activa : BOOLEAN NOT NULL" vertex="1">
+          <mxGeometry height="20" width="290" y="156" as="geometry" />
+        </mxCell>
+        <mxCell id="t_partida_r5" parent="t_partida" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=8;fontSize=11;" value="fecha_inicio : DATETIME NOT NULL" vertex="1">
+          <mxGeometry height="20" width="290" y="176" as="geometry" />
+        </mxCell>
+        <mxCell id="t_comb" parent="1" style="swimlane;fontStyle=1;align=center;startSize=30;fillColor=#fff2cc;strokeColor=#d6b656;fontSize=12;" value="COMBINACION_ENTRADA" vertex="1">
+          <mxGeometry height="160" width="290" x="380" y="240" as="geometry" />
+        </mxCell>
+        <mxCell id="t_comb_pk" parent="t_comb" style="text;strokeColor=none;fillColor=#fff9c4;align=left;verticalAlign=top;spacingLeft=8;fontSize=11;fontStyle=1;" value="🔑 id : VARCHAR(36) PK" vertex="1">
+          <mxGeometry height="22" width="290" y="30" as="geometry" />
+        </mxCell>
+        <mxCell id="t_comb_fk" parent="t_comb" style="text;strokeColor=none;fillColor=#f8d7da;align=left;verticalAlign=top;spacingLeft=8;fontSize=11;" value="🔗 id_partida : VARCHAR(36) FK → PARTIDA.id" vertex="1">
+          <mxGeometry height="22" width="290" y="52" as="geometry" />
+        </mxCell>
+        <mxCell id="t_comb_r1" parent="t_comb" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=8;fontSize=11;" value="letras : VARCHAR(6) NOT NULL" vertex="1">
+          <mxGeometry height="20" width="290" y="74" as="geometry" />
+        </mxCell>
+        <mxCell id="t_comb_r2" parent="t_comb" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=8;fontSize=11;" value="numeros : VARCHAR(5) NOT NULL" vertex="1">
+          <mxGeometry height="20" width="290" y="94" as="geometry" />
+        </mxCell>
+        <mxCell id="t_comb_r3" parent="t_comb" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=8;fontSize=11;" value="es_correcta : BOOLEAN NOT NULL" vertex="1">
+          <mxGeometry height="20" width="290" y="114" as="geometry" />
+        </mxCell>
+        <mxCell id="t_comb_r4" parent="t_comb" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=8;fontSize=11;" value="timestamp : DATETIME NOT NULL" vertex="1">
+          <mxGeometry height="20" width="290" y="134" as="geometry" />
+        </mxCell>
+        <mxCell id="t_regla" parent="1" style="swimlane;fontStyle=1;align=center;startSize=30;fillColor=#fff2cc;strokeColor=#d6b656;fontSize=12;" value="REGLA" vertex="1">
+          <mxGeometry height="160" width="280" x="730" y="240" as="geometry" />
+        </mxCell>
+        <mxCell id="t_regla_pk" parent="t_regla" style="text;strokeColor=none;fillColor=#fff9c4;align=left;verticalAlign=top;spacingLeft=8;fontSize=11;fontStyle=1;" value="🔑 id : VARCHAR(36) PK" vertex="1">
+          <mxGeometry height="22" width="280" y="30" as="geometry" />
+        </mxCell>
+        <mxCell id="t_regla_fk" parent="t_regla" style="text;strokeColor=none;fillColor=#f8d7da;align=left;verticalAlign=top;spacingLeft=8;fontSize=11;" value="🔗 id_partida : VARCHAR(36) FK → PARTIDA.id" vertex="1">
+          <mxGeometry height="22" width="280" y="52" as="geometry" />
+        </mxCell>
+        <mxCell id="t_regla_r1" parent="t_regla" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=8;fontSize=11;" value="descripcion : TEXT NOT NULL" vertex="1">
+          <mxGeometry height="20" width="280" y="74" as="geometry" />
+        </mxCell>
+        <mxCell id="t_regla_r2" parent="t_regla" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=8;fontSize=11;" value="valor_secreto : VARCHAR(100) NOT NULL" vertex="1">
+          <mxGeometry height="20" width="280" y="94" as="geometry" />
+        </mxCell>
+        <mxCell id="t_regla_r3" parent="t_regla" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=8;fontSize=11;" value="activa : BOOLEAN NOT NULL" vertex="1">
+          <mxGeometry height="20" width="280" y="114" as="geometry" />
+        </mxCell>
+        <mxCell id="t_regla_r4" parent="t_regla" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=8;fontSize=11;" value="fecha_creacion : DATETIME NOT NULL" vertex="1">
+          <mxGeometry height="20" width="280" y="134" as="geometry" />
+        </mxCell>
+        <mxCell id="t_intento" parent="1" style="swimlane;fontStyle=1;align=center;startSize=30;fillColor=#fff2cc;strokeColor=#d6b656;fontSize=12;" value="INTENTO" vertex="1">
+          <mxGeometry height="160" width="280" x="1070" y="240" as="geometry" />
+        </mxCell>
+        <mxCell id="t_intento_pk" parent="t_intento" style="text;strokeColor=none;fillColor=#fff9c4;align=left;verticalAlign=top;spacingLeft=8;fontSize=11;fontStyle=1;" value="🔑 id : VARCHAR(36) PK" vertex="1">
+          <mxGeometry height="22" width="280" y="30" as="geometry" />
+        </mxCell>
+        <mxCell id="t_intento_fk" parent="t_intento" style="text;strokeColor=none;fillColor=#f8d7da;align=left;verticalAlign=top;spacingLeft=8;fontSize=11;" value="🔗 id_partida : VARCHAR(36) FK → PARTIDA.id" vertex="1">
+          <mxGeometry height="22" width="280" y="52" as="geometry" />
+        </mxCell>
+        <mxCell id="t_intento_r1" parent="t_intento" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=8;fontSize=11;" value="numero : INT NOT NULL" vertex="1">
+          <mxGeometry height="20" width="280" y="74" as="geometry" />
+        </mxCell>
+        <mxCell id="t_intento_r2" parent="t_intento" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=8;fontSize=11;" value="resultado : VARCHAR(20) NOT NULL" vertex="1">
+          <mxGeometry height="20" width="280" y="94" as="geometry" />
+        </mxCell>
+        <mxCell id="t_intento_r3" parent="t_intento" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=8;fontSize=11;" value="timestamp : DATETIME NOT NULL" vertex="1">
+          <mxGeometry height="20" width="280" y="114" as="geometry" />
+        </mxCell>
+        <mxCell id="t_intento_r4" parent="t_intento" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=8;fontSize=11;" value="detalle : TEXT" vertex="1">
+          <mxGeometry height="20" width="280" y="134" as="geometry" />
+        </mxCell>
+        <mxCell id="t_pista" parent="1" style="swimlane;fontStyle=1;align=center;startSize=30;fillColor=#ffe6cc;strokeColor=#d79b00;fontSize=12;" value="PISTA" vertex="1">
+          <mxGeometry height="160" width="280" x="30" y="530" as="geometry" />
+        </mxCell>
+        <mxCell id="t_pista_pk" parent="t_pista" style="text;strokeColor=none;fillColor=#fff9c4;align=left;verticalAlign=top;spacingLeft=8;fontSize=11;fontStyle=1;" value="🔑 id : VARCHAR(36) PK" vertex="1">
+          <mxGeometry height="22" width="280" y="30" as="geometry" />
+        </mxCell>
+        <mxCell id="t_pista_fk" parent="t_pista" style="text;strokeColor=none;fillColor=#f8d7da;align=left;verticalAlign=top;spacingLeft=8;fontSize=11;" value="🔗 id_partida : VARCHAR(36) FK → PARTIDA.id" vertex="1">
+          <mxGeometry height="22" width="280" y="52" as="geometry" />
+        </mxCell>
+        <mxCell id="t_pista_r1" parent="t_pista" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=8;fontSize=11;" value="numero : INT NOT NULL" vertex="1">
+          <mxGeometry height="20" width="280" y="74" as="geometry" />
+        </mxCell>
+        <mxCell id="t_pista_r2" parent="t_pista" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=8;fontSize=11;" value="texto : TEXT NOT NULL" vertex="1">
+          <mxGeometry height="20" width="280" y="94" as="geometry" />
+        </mxCell>
+        <mxCell id="t_pista_r3" parent="t_pista" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=8;fontSize=11;" value="usada : BOOLEAN DEFAULT FALSE" vertex="1">
+          <mxGeometry height="20" width="280" y="114" as="geometry" />
+        </mxCell>
+        <mxCell id="t_pista_r4" parent="t_pista" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=8;fontSize=11;" value="fecha_uso : DATETIME" vertex="1">
+          <mxGeometry height="20" width="280" y="134" as="geometry" />
+        </mxCell>
+        <mxCell id="t_record" parent="1" style="swimlane;fontStyle=1;align=center;startSize=30;fillColor=#dae8fc;strokeColor=#6c8ebf;fontSize=12;" value="RECORD" vertex="1">
+          <mxGeometry height="180" width="290" x="380" y="530" as="geometry" />
+        </mxCell>
+        <mxCell id="t_record_pk" parent="t_record" style="text;strokeColor=none;fillColor=#fff9c4;align=left;verticalAlign=top;spacingLeft=8;fontSize=11;fontStyle=1;" value="🔑 id : VARCHAR(36) PK" vertex="1">
+          <mxGeometry height="22" width="290" y="30" as="geometry" />
+        </mxCell>
+        <mxCell id="t_record_fk1" parent="t_record" style="text;strokeColor=none;fillColor=#f8d7da;align=left;verticalAlign=top;spacingLeft=8;fontSize=11;" value="🔗 apodo_jugador : VARCHAR(10) FK → JUGADOR.apodo" vertex="1">
+          <mxGeometry height="22" width="290" y="52" as="geometry" />
+        </mxCell>
+        <mxCell id="t_record_fk2" parent="t_record" style="text;strokeColor=none;fillColor=#f8d7da;align=left;verticalAlign=top;spacingLeft=8;fontSize=11;" value="🔗 id_nivel : VARCHAR(36) FK → NIVEL.id" vertex="1">
+          <mxGeometry height="22" width="290" y="74" as="geometry" />
+        </mxCell>
+        <mxCell id="t_record_r1" parent="t_record" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=8;fontSize=11;" value="puntuacion : INT NOT NULL" vertex="1">
+          <mxGeometry height="20" width="290" y="96" as="geometry" />
+        </mxCell>
+        <mxCell id="t_record_r2" parent="t_record" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=8;fontSize=11;" value="fecha : DATETIME NOT NULL" vertex="1">
+          <mxGeometry height="20" width="290" y="116" as="geometry" />
+        </mxCell>
+        <mxCell id="t_record_r3" parent="t_record" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=8;fontSize=11;" value="posicion : INT NOT NULL" vertex="1">
+          <mxGeometry height="20" width="290" y="136" as="geometry" />
+        </mxCell>
+        <mxCell id="t_record_r4" parent="t_record" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=8;fontSize=11;" value="nombre_nivel : VARCHAR(20) NOT NULL" vertex="1">
+          <mxGeometry height="20" width="290" y="156" as="geometry" />
+        </mxCell>
+        <mxCell id="leyenda" parent="1" style="swimlane;fontStyle=1;align=center;startSize=24;fillColor=#f5f5f5;strokeColor=#666666;fontSize=11;" value="&lt;b&gt;Leyenda&lt;/b&gt;" vertex="1">
+          <mxGeometry height="100" width="230" x="750" y="530" as="geometry" />
+        </mxCell>
+        <mxCell id="ley1" parent="leyenda" style="text;strokeColor=none;fillColor=#fff9c4;align=left;verticalAlign=top;spacingLeft=8;fontSize=11;" value="🔑  Clave primaria (PK)" vertex="1">
+          <mxGeometry height="24" width="230" y="24" as="geometry" />
+        </mxCell>
+        <mxCell id="ley2" parent="leyenda" style="text;strokeColor=none;fillColor=#f8d7da;align=left;verticalAlign=top;spacingLeft=8;fontSize=11;" value="🔗  Clave foránea (FK)" vertex="1">
+          <mxGeometry height="24" width="230" y="48" as="geometry" />
+        </mxCell>
+        <mxCell id="ley3" parent="leyenda" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=8;fontSize=11;" value="     Campo regular" vertex="1">
+          <mxGeometry height="24" width="230" y="72" as="geometry" />
+        </mxCell>
+        <mxCell id="rel_jug_ses" edge="1" parent="1" source="t_jugador" style="edgeStyle=orthogonalEdgeStyle;rounded=0;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;strokeColor=#6c8ebf;" target="t_sesion">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="lbl_jug_ses" connectable="0" parent="rel_jug_ses" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;fontSize=11;" value="1        1" vertex="1">
+          <mxGeometry relative="1" x="-0.1" as="geometry" />
+        </mxCell>
+        <mxCell id="rel_niv_cfg" edge="1" parent="1" source="t_nivel" style="edgeStyle=orthogonalEdgeStyle;rounded=0;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;strokeColor=#9673a6;" target="t_config">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="lbl_niv_cfg" connectable="0" parent="rel_niv_cfg" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;fontSize=11;" value="1        1" vertex="1">
+          <mxGeometry relative="1" x="-0.1" as="geometry" />
+        </mxCell>
+        <mxCell id="rel_jug_par" edge="1" parent="1" source="t_jugador" style="edgeStyle=orthogonalEdgeStyle;rounded=0;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0;entryY=0.3;entryDx=0;entryDy=0;strokeColor=#d6b656;" target="t_partida">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="lbl_jug_par" connectable="0" parent="rel_jug_par" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;fontSize=11;" value="1        N" vertex="1">
+          <mxGeometry relative="1" x="-0.1" as="geometry" />
+        </mxCell>
+        <mxCell id="rel_niv_par" edge="1" parent="1" source="t_nivel" style="edgeStyle=orthogonalEdgeStyle;rounded=0;exitX=0;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;strokeColor=#9673a6;" target="t_partida">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="670" y="220" />
+              <mxPoint x="175" y="220" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="lbl_niv_par" connectable="0" parent="rel_niv_par" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;fontSize=11;" value="1        N" vertex="1">
+          <mxGeometry relative="1" x="-0.1" as="geometry" />
+        </mxCell>
+        <mxCell id="rel_par_com" edge="1" parent="1" source="t_partida" style="edgeStyle=orthogonalEdgeStyle;rounded=0;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;strokeColor=#d6b656;" target="t_comb">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="lbl_par_com" connectable="0" parent="rel_par_com" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;fontSize=11;" value="1        N" vertex="1">
+          <mxGeometry relative="1" x="-0.1" as="geometry" />
+        </mxCell>
+        <mxCell id="rel_par_reg" edge="1" parent="1" source="t_partida" style="edgeStyle=orthogonalEdgeStyle;rounded=0;exitX=1;exitY=0.3;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;strokeColor=#d6b656;" target="t_regla">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="680" y="305" />
+              <mxPoint x="680" y="320" />
+              <mxPoint x="730" y="320" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="lbl_par_reg" connectable="0" parent="rel_par_reg" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;fontSize=11;" value="1        N" vertex="1">
+          <mxGeometry relative="1" x="-0.1" as="geometry" />
+        </mxCell>
+        <mxCell id="rel_par_int" edge="1" parent="1" source="t_partida" style="edgeStyle=orthogonalEdgeStyle;rounded=0;exitX=1;exitY=0.7;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;strokeColor=#d6b656;" target="t_intento">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="680" y="375" />
+              <mxPoint x="680" y="360" />
+              <mxPoint x="1070" y="360" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="lbl_par_int" connectable="0" parent="rel_par_int" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;fontSize=11;" value="1        N" vertex="1">
+          <mxGeometry relative="1" x="-0.1" as="geometry" />
+        </mxCell>
+        <mxCell id="rel_par_pis" edge="1" parent="1" source="t_partida" style="edgeStyle=orthogonalEdgeStyle;rounded=0;exitX=0;exitY=0.7;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;strokeColor=#d79b00;" target="t_pista">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="10" y="375" />
+              <mxPoint x="10" y="530" />
+              <mxPoint x="170" y="530" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="lbl_par_pis" connectable="0" parent="rel_par_pis" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;fontSize=11;" value="1        N" vertex="1">
+          <mxGeometry relative="1" x="-0.1" as="geometry" />
+        </mxCell>
+        <mxCell id="rel_jug_rec" edge="1" parent="1" source="t_jugador" style="edgeStyle=orthogonalEdgeStyle;rounded=0;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0;entryY=0.3;entryDx=0;entryDy=0;strokeColor=#6c8ebf;" target="t_record">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="160" y="510" />
+              <mxPoint x="380" y="510" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="lbl_jug_rec" connectable="0" parent="rel_jug_rec" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;fontSize=11;" value="1        N" vertex="1">
+          <mxGeometry relative="1" x="-0.1" as="geometry" />
+        </mxCell>
+        <mxCell id="rel_niv_rec" edge="1" parent="1" source="t_nivel" style="edgeStyle=orthogonalEdgeStyle;rounded=0;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;strokeColor=#9673a6;" target="t_record">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="810" y="510" />
+              <mxPoint x="525" y="510" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="lbl_niv_rec" connectable="0" parent="rel_niv_rec" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;fontSize=11;" value="1        N" vertex="1">
+          <mxGeometry relative="1" x="-0.1" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>

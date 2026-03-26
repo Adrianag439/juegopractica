@@ -1,0 +1,201 @@
+<mxfile host="Electron" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) draw.io/29.6.1 Chrome/142.0.7444.265 Electron/39.8.0 Safari/537.36" version="29.6.1">
+  <diagram id="9vMu19BITnB1Pdpaplrh" name="Página-1">
+    <mxGraphModel dx="1158" dy="802" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1654" pageHeight="1169" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="pkg_model" parent="1" style="swimlane;startSize=30;fillColor=#dae8fc;strokeColor=#1e4d78;fontSize=13;fontStyle=1;fontColor=#1e4d78;align=left;spacingLeft=10;arcSize=4;" value="modelo" vertex="1">
+          <mxGeometry height="600" width="1250" x="20" y="20" as="geometry" />
+        </mxCell>
+        <mxCell id="Jugador" parent="pkg_model" style="swimlane;fontStyle=1;align=center;startSize=30;fillColor=#dae8fc;strokeColor=#6c8ebf;fontSize=12;" value="JUGADOR" vertex="1">
+          <mxGeometry height="110" width="240" x="30" y="60" as="geometry" />
+        </mxCell>
+        <mxCell id="Jugador_attrs" parent="Jugador" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=8;fontSize=11;" value="– id : String&#xa;– apodo : String&#xa;– sesionActiva : Boolean&#xa;– fechaRegistro : Date" vertex="1">
+          <mxGeometry height="75" width="240" y="30" as="geometry" />
+        </mxCell>
+        <mxCell id="Sesion" parent="pkg_model" style="swimlane;fontStyle=1;align=center;startSize=30;fillColor=#dae8fc;strokeColor=#6c8ebf;fontSize=12;" value="SESION" vertex="1">
+          <mxGeometry height="110" width="240" x="310" y="60" as="geometry" />
+        </mxCell>
+        <mxCell id="Sesion_attrs" parent="Sesion" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=8;fontSize=11;" value="– apodo : String&#xa;– activa : Boolean&#xa;– fechaCreacion : Date&#xa;– token : String" vertex="1">
+          <mxGeometry height="75" width="240" y="30" as="geometry" />
+        </mxCell>
+        <mxCell id="Nivel" parent="pkg_model" style="swimlane;fontStyle=3;align=center;startSize=30;fillColor=#e1d5e7;strokeColor=#9673a6;fontSize=12;" value="NIVELES" vertex="1">
+          <mxGeometry height="130" width="250" x="600" y="60" as="geometry" />
+        </mxCell>
+        <mxCell id="Nivel_attrs" parent="Nivel" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=8;fontSize=11;" value="– id : String&#xa;– nombre : String&#xa;– vidas : Integer&#xa;– puntuacionBase : Integer&#xa;– tieneTemporizador : Boolean" vertex="1">
+          <mxGeometry height="95" width="250" y="30" as="geometry" />
+        </mxCell>
+        <mxCell id="NivelFacil" parent="pkg_model" style="swimlane;fontStyle=1;align=center;startSize=30;fillColor=#d5e8d4;strokeColor=#82b366;fontSize=12;" value="FACIL" vertex="1">
+          <mxGeometry height="90" width="240" x="510" y="290" as="geometry" />
+        </mxCell>
+        <mxCell id="NivelFacil_attrs" parent="NivelFacil" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=8;fontSize=11;" value="– pistasDisponibles : Integer = 2&#xa;– intentosParaPista : Integer = 5" vertex="1">
+          <mxGeometry height="55" width="240" y="30" as="geometry" />
+        </mxCell>
+        <mxCell id="NivelDificil" parent="pkg_model" style="swimlane;fontStyle=1;align=center;startSize=30;fillColor=#f8cecc;strokeColor=#b85450;fontSize=12;" value="DIFICIL" vertex="1">
+          <mxGeometry height="90" width="240" x="790" y="290" as="geometry" />
+        </mxCell>
+        <mxCell id="NivelDificil_attrs" parent="NivelDificil" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=8;fontSize=11;" value="– tiempoLimiteSeg : Integer&#xa;– tiempoRestante : Integer" vertex="1">
+          <mxGeometry height="55" width="240" y="30" as="geometry" />
+        </mxCell>
+        <mxCell id="Partida" parent="pkg_model" style="swimlane;fontStyle=1;align=center;startSize=30;fillColor=#fff2cc;strokeColor=#d6b656;fontSize=12;" value="PARTIDA" vertex="1">
+          <mxGeometry height="150" width="240" x="30" y="290" as="geometry" />
+        </mxCell>
+        <mxCell id="Partida_attrs" parent="Partida" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=8;fontSize=11;" value="– id : String&#xa;– apodoJugador : String&#xa;– idNivel : String&#xa;– vidasRestantes : Integer&#xa;– puntuacion : Integer&#xa;– intentosFallidos : Integer&#xa;– activa : Boolean" vertex="1">
+          <mxGeometry height="115" width="240" y="30" as="geometry" />
+        </mxCell>
+        <mxCell id="CombinacionEntrada" parent="pkg_model" style="swimlane;fontStyle=1;align=center;startSize=30;fillColor=#fff2cc;strokeColor=#d6b656;fontSize=12;" value="COMINACION ENTRADA" vertex="1">
+          <mxGeometry height="110" width="180" x="310" y="290" as="geometry" />
+        </mxCell>
+        <mxCell id="CE_attrs" parent="CombinacionEntrada" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=8;fontSize=11;" value="– id : String&#xa;– idPartida : String&#xa;– letras : char[6]&#xa;– numeros : int[5]" vertex="1">
+          <mxGeometry height="75" width="180" y="30" as="geometry" />
+        </mxCell>
+        <mxCell id="SistemaPistas" parent="pkg_model" style="swimlane;fontStyle=1;align=center;startSize=30;fillColor=#ffe6cc;strokeColor=#d79b00;fontSize=12;" value="&lt;b&gt;Pista&lt;/b&gt;" vertex="1">
+          <mxGeometry height="100" width="240" x="30" y="480" as="geometry" />
+        </mxCell>
+        <mxCell id="SP_attrs" parent="SistemaPistas" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=8;fontSize=11;" value="– id : String&#xa;– idPartida : String&#xa;– texto : String&#xa;– numero : Integer&#xa;– usada : Boolean" vertex="1">
+          <mxGeometry height="65" width="240" y="30" as="geometry" />
+        </mxCell>
+        <mxCell id="Record" parent="pkg_model" style="swimlane;fontStyle=1;align=center;startSize=30;fillColor=#dae8fc;strokeColor=#6c8ebf;fontSize=12;" value="RECORD" vertex="1">
+          <mxGeometry height="100" width="220" x="310" y="480" as="geometry" />
+        </mxCell>
+        <mxCell id="Rec_attrs" parent="Record" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=8;fontSize=11;" value="– id : String&#xa;– apodoJugador : String&#xa;– idNivel : String&#xa;– puntuacion : Integer&#xa;– fecha : Date" vertex="1">
+          <mxGeometry height="65" width="220" y="30" as="geometry" />
+        </mxCell>
+        <mxCell id="Regla" parent="pkg_model" style="swimlane;fontStyle=1;align=center;startSize=30;fillColor=#fff2cc;strokeColor=#d6b656;fontSize=12;" value="REGLA" vertex="1">
+          <mxGeometry height="100" width="240" x="560" y="480" as="geometry" />
+        </mxCell>
+        <mxCell id="Regla_attrs" parent="Regla" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=8;fontSize=11;" value="– id : String&#xa;– idPartida : String&#xa;– descripcion : String&#xa;– valorSecreto : String&#xa;– activa : Boolean" vertex="1">
+          <mxGeometry height="65" width="240" y="30" as="geometry" />
+        </mxCell>
+        <mxCell id="Intento" parent="pkg_model" style="swimlane;fontStyle=1;align=center;startSize=30;fillColor=#fff2cc;strokeColor=#d6b656;fontSize=12;" value="INTENTO" vertex="1">
+          <mxGeometry height="100" width="240" x="830" y="480" as="geometry" />
+        </mxCell>
+        <mxCell id="Intento_attrs" parent="Intento" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=8;fontSize=11;" value="– id : String&#xa;– idPartida : String&#xa;– numero : Integer&#xa;– resultado : String&#xa;– timestamp : Date" vertex="1">
+          <mxGeometry height="65" width="240" y="30" as="geometry" />
+        </mxCell>
+        <mxCell id="rel_facil_nivel" edge="1" parent="pkg_model" source="NivelFacil" style="edgeStyle=orthogonalEdgeStyle;rounded=0;endArrow=block;endFill=0;exitX=0.5;exitY=0;exitDx=0;exitDy=0;entryX=0.3;entryY=1;entryDx=0;entryDy=0;" target="Nivel">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="rel_dificil_nivel" edge="1" parent="pkg_model" source="NivelDificil" style="edgeStyle=orthogonalEdgeStyle;rounded=0;endArrow=block;endFill=0;exitX=0.5;exitY=0;exitDx=0;exitDy=0;entryX=0.7;entryY=1;entryDx=0;entryDy=0;" target="Nivel">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="pkg_services" parent="1" style="swimlane;startSize=30;fillColor=#ede7f6;strokeColor=#7d4427;fontSize=13;fontStyle=1;fontColor=#7d4427;align=left;spacingLeft=10;arcSize=4;" value="servicios " vertex="1">
+          <mxGeometry height="480" width="1250" x="1780" y="30" as="geometry" />
+        </mxCell>
+        <mxCell id="JugadorSvc" parent="pkg_services" style="swimlane;fontStyle=1;align=center;startSize=30;fillColor=#f0e6d3;strokeColor=#b46504;fontSize=12;" value="&lt;b&gt;JugadorService&lt;/b&gt;" vertex="1">
+          <mxGeometry height="130" width="250" x="30" y="50" as="geometry" />
+        </mxCell>
+        <mxCell id="JugadorSvc_ops" parent="JugadorSvc" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=8;fontSize=11;" value="+ guardarJugador(jugador : Jugador)&#xa;+ buscarPorApodo(apodo : String)&#xa;+ apodoDisponible(apodo : String) : Boolean&#xa;+ eliminarJugador(id : String)" vertex="1">
+          <mxGeometry height="95" width="250" y="30" as="geometry" />
+        </mxCell>
+        <mxCell id="SesionSvc" parent="pkg_services" style="swimlane;fontStyle=1;align=center;startSize=30;fillColor=#f0e6d3;strokeColor=#b46504;fontSize=12;" value="&lt;b&gt;SesionService&lt;/b&gt;" vertex="1">
+          <mxGeometry height="130" width="250" x="310" y="50" as="geometry" />
+        </mxCell>
+        <mxCell id="SesionSvc_ops" parent="SesionSvc" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=8;fontSize=11;" value="+ guardarSesion(sesion : Sesion)&#xa;+ obtenerSesionActiva() : Sesion&#xa;+ cerrarSesion()&#xa;+ limpiarSesionCorrupta()" vertex="1">
+          <mxGeometry height="95" width="250" y="30" as="geometry" />
+        </mxCell>
+        <mxCell id="NivelSvc" parent="pkg_services" style="swimlane;fontStyle=1;align=center;startSize=30;fillColor=#f0e6d3;strokeColor=#b46504;fontSize=12;" value="&lt;b&gt;NivelService&lt;/b&gt;" vertex="1">
+          <mxGeometry height="110" width="270" x="600" y="50" as="geometry" />
+        </mxCell>
+        <mxCell id="NivelSvc_ops" parent="NivelSvc" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=8;fontSize=11;" value="+ obtenerNivel(id : String) : Nivel&#xa;+ listarNiveles() : List&lt;Nivel&gt;&#xa;+ guardarConfigNivel(config)" vertex="1">
+          <mxGeometry height="75" width="270" y="30" as="geometry" />
+        </mxCell>
+        <mxCell id="PartidaSvc" parent="pkg_services" style="swimlane;fontStyle=1;align=center;startSize=30;fillColor=#f0e6d3;strokeColor=#b46504;fontSize=12;" value="&lt;b&gt;PartidaService&lt;/b&gt;" vertex="1">
+          <mxGeometry height="130" width="270" x="900" y="50" as="geometry" />
+        </mxCell>
+        <mxCell id="PartidaSvc_ops" parent="PartidaSvc" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=8;fontSize=11;" value="+ guardarPartida(partida : Partida)&#xa;+ obtenerPartidaActiva() : Partida&#xa;+ finalizarPartida(id : String)&#xa;+ reiniciarPartida(id : String)" vertex="1">
+          <mxGeometry height="95" width="270" y="30" as="geometry" />
+        </mxCell>
+        <mxCell id="CombinacionSvc" parent="pkg_services" style="swimlane;fontStyle=1;align=center;startSize=30;fillColor=#f0e6d3;strokeColor=#b46504;fontSize=12;" value="&lt;b&gt;CombinacionService&lt;/b&gt;" vertex="1">
+          <mxGeometry height="110" width="270" x="30" y="230" as="geometry" />
+        </mxCell>
+        <mxCell id="CombinacionSvc_ops" parent="CombinacionSvc" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=8;fontSize=11;" value="+ guardarCombinacion(comb : CombinacionEntrada)&#xa;+ listarPorPartida(idPartida : String)&#xa;+ validarCombinacion(comb : CombinacionEntrada)" vertex="1">
+          <mxGeometry height="75" width="270" y="30" as="geometry" />
+        </mxCell>
+        <mxCell id="PistaSvc" parent="pkg_services" style="swimlane;fontStyle=1;align=center;startSize=30;fillColor=#f0e6d3;strokeColor=#b46504;fontSize=12;" value="&lt;b&gt;PistaService&lt;/b&gt;" vertex="1">
+          <mxGeometry height="110" width="270" x="330" y="230" as="geometry" />
+        </mxCell>
+        <mxCell id="PistaSvc_ops" parent="PistaSvc" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=8;fontSize=11;" value="+ guardarPista(pista : Pista)&#xa;+ obtenerDisponibles(idPartida : String)&#xa;+ marcarPistaUsada(id : String)" vertex="1">
+          <mxGeometry height="75" width="270" y="30" as="geometry" />
+        </mxCell>
+        <mxCell id="RecordSvc" parent="pkg_services" style="swimlane;fontStyle=1;align=center;startSize=30;fillColor=#f0e6d3;strokeColor=#b46504;fontSize=12;" value="&lt;b&gt;RecordService&lt;/b&gt;" vertex="1">
+          <mxGeometry height="130" width="270" x="630" y="230" as="geometry" />
+        </mxCell>
+        <mxCell id="RecordSvc_ops" parent="RecordSvc" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=8;fontSize=11;" value="+ guardarRecord(record : Record)&#xa;+ obtenerTop5(idNivel : String) : List&lt;Record&gt;&#xa;+ evaluarSiEntraAlTop(record : Record) : Boolean&#xa;+ listarTodos() : List&lt;Record&gt;" vertex="1">
+          <mxGeometry height="95" width="270" y="30" as="geometry" />
+        </mxCell>
+        <mxCell id="ReglaSvc" parent="pkg_services" style="swimlane;fontStyle=1;align=center;startSize=30;fillColor=#f0e6d3;strokeColor=#b46504;fontSize=12;" value="&lt;b&gt;ReglaService&lt;/b&gt;" vertex="1">
+          <mxGeometry height="130" width="270" x="30" y="390" as="geometry" />
+        </mxCell>
+        <mxCell id="ReglaSvc_ops" parent="ReglaSvc" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=8;fontSize=11;" value="+ guardarRegla(regla : Regla)&#xa;+ obtenerReglaPorPartida(idPartida : String)&#xa;+ generarNuevaRegla() : Regla&#xa;+ desactivarRegla(id : String)" vertex="1">
+          <mxGeometry height="95" width="270" y="30" as="geometry" />
+        </mxCell>
+        <mxCell id="IntentoSvc" parent="pkg_services" style="swimlane;fontStyle=1;align=center;startSize=30;fillColor=#f0e6d3;strokeColor=#b46504;fontSize=12;" value="&lt;b&gt;IntentoService&lt;/b&gt;" vertex="1">
+          <mxGeometry height="130" width="270" x="330" y="390" as="geometry" />
+        </mxCell>
+        <mxCell id="IntentoSvc_ops" parent="IntentoSvc" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=8;fontSize=11;" value="+ guardarIntento(intento : Intento)&#xa;+ listarPorPartida(idPartida : String)&#xa;+ contarIntentos(idPartida : String) : Integer&#xa;+ limpiarHistorial(idPartida : String)" vertex="1">
+          <mxGeometry height="95" width="270" y="30" as="geometry" />
+        </mxCell>
+        <mxCell id="e_jug" edge="1" parent="1" source="JugadorSvc" style="edgeStyle=orthogonalEdgeStyle;dashed=1;endArrow=open;endFill=0;strokeColor=#7d4427;fontSize=10;" target="Jugador">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e_jug_lbl" connectable="0" parent="e_jug" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;fontSize=10;fontStyle=2;" value="&lt;&lt;use&gt;&gt;" vertex="1">
+          <mxGeometry relative="1" x="-0.1" as="geometry" />
+        </mxCell>
+        <mxCell id="e_ses" edge="1" parent="1" source="SesionSvc" style="edgeStyle=orthogonalEdgeStyle;dashed=1;endArrow=open;endFill=0;strokeColor=#7d4427;fontSize=10;" target="Sesion">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e_ses_lbl" connectable="0" parent="e_ses" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;fontSize=10;fontStyle=2;" value="&lt;&lt;use&gt;&gt;" vertex="1">
+          <mxGeometry relative="1" x="-0.1" as="geometry" />
+        </mxCell>
+        <mxCell id="e_niv" edge="1" parent="1" source="NivelSvc" style="edgeStyle=orthogonalEdgeStyle;dashed=1;endArrow=open;endFill=0;strokeColor=#7d4427;fontSize=10;" target="Nivel">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e_niv_lbl" connectable="0" parent="e_niv" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;fontSize=10;fontStyle=2;" value="&lt;&lt;use&gt;&gt;" vertex="1">
+          <mxGeometry relative="1" x="-0.1" as="geometry" />
+        </mxCell>
+        <mxCell id="e_par" edge="1" parent="1" source="PartidaSvc" style="edgeStyle=orthogonalEdgeStyle;dashed=1;endArrow=open;endFill=0;strokeColor=#7d4427;fontSize=10;" target="Partida">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e_par_lbl" connectable="0" parent="e_par" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;fontSize=10;fontStyle=2;" value="&lt;&lt;use&gt;&gt;" vertex="1">
+          <mxGeometry relative="1" x="-0.1" as="geometry" />
+        </mxCell>
+        <mxCell id="e_com" edge="1" parent="1" source="CombinacionSvc" style="edgeStyle=orthogonalEdgeStyle;dashed=1;endArrow=open;endFill=0;strokeColor=#7d4427;fontSize=10;" target="CombinacionEntrada">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e_com_lbl" connectable="0" parent="e_com" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;fontSize=10;fontStyle=2;" value="&lt;&lt;use&gt;&gt;" vertex="1">
+          <mxGeometry relative="1" x="-0.1" as="geometry" />
+        </mxCell>
+        <mxCell id="e_pis" edge="1" parent="1" source="PistaSvc" style="edgeStyle=orthogonalEdgeStyle;dashed=1;endArrow=open;endFill=0;strokeColor=#7d4427;fontSize=10;" target="SistemaPistas">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e_pis_lbl" connectable="0" parent="e_pis" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;fontSize=10;fontStyle=2;" value="&lt;&lt;use&gt;&gt;" vertex="1">
+          <mxGeometry relative="1" x="-0.1" as="geometry" />
+        </mxCell>
+        <mxCell id="e_rec" edge="1" parent="1" source="RecordSvc" style="edgeStyle=orthogonalEdgeStyle;dashed=1;endArrow=open;endFill=0;strokeColor=#7d4427;fontSize=10;" target="Record">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e_rec_lbl" connectable="0" parent="e_rec" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;fontSize=10;fontStyle=2;" value="&lt;&lt;use&gt;&gt;" vertex="1">
+          <mxGeometry relative="1" x="-0.1" as="geometry" />
+        </mxCell>
+        <mxCell id="8822_GZttvForrOFwEsG-1" connectable="0" parent="e_rec" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" value="Text" vertex="1">
+          <mxGeometry relative="1" x="0.6495" y="-1" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="e_reg" edge="1" parent="1" source="ReglaSvc" style="edgeStyle=orthogonalEdgeStyle;dashed=1;endArrow=open;endFill=0;strokeColor=#7d4427;fontSize=10;" target="Regla">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e_reg_lbl" connectable="0" parent="e_reg" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;fontSize=10;fontStyle=2;" value="&lt;&lt;use&gt;&gt;" vertex="1">
+          <mxGeometry relative="1" x="-0.1" as="geometry" />
+        </mxCell>
+        <mxCell id="e_int" edge="1" parent="1" source="IntentoSvc" style="edgeStyle=orthogonalEdgeStyle;dashed=1;endArrow=open;endFill=0;strokeColor=#7d4427;fontSize=10;" target="Intento">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e_int_lbl" connectable="0" parent="e_int" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;fontSize=10;fontStyle=2;" value="&lt;&lt;use&gt;&gt;" vertex="1">
+          <mxGeometry relative="1" x="-0.1" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
